@@ -10,3 +10,8 @@ for (let i = 1; i <= 100; i++) {
     continue;
   } else console.log(i);
 }
+
+const sodfj = [
+  { asf: 'sgoj', okfs: 'sgs' },
+  { asf: 'sgdoj', okfs: 'sags' }
+];
