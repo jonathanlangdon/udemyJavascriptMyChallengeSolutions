@@ -57,3 +57,12 @@ const positiveSum = num =>
   num.filter(n => n > 0).reduce((acc, cur) => acc + cur);
 
 console.log(positiveSum(numbers));
+
+//Challenge 3
+
+const words = ['coder', 'programmer', 'developer'];
+
+const capitalizeWords = arr =>
+  arr.map(word => word[0].toUpperCase() + word.slice(1));
+
+console.log(capitalizeWords(words));
