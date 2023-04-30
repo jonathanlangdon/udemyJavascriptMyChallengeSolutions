@@ -48,3 +48,12 @@ for (const human of people) {
   }
 }
 console.log(youngPeople);
+
+//Challenge 2
+
+const numbers = [2, -30, 50, 20, -12, -9, 7];
+
+const positiveSum = num =>
+  num.filter(n => n > 0).reduce((acc, cur) => acc + cur);
+
+console.log(positiveSum(numbers));
