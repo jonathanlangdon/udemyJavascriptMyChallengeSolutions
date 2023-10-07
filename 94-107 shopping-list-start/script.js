@@ -1,6 +1,7 @@
 const itemForm = document.getElementById('item-form')
 const itemInput = document.getElementById('item-input')
 const itemList = document.getElementById('item-list')
+const clearBtn = document.getElementById('clear')
 
 function addItem(e) {
   e.preventDefault()
@@ -25,5 +26,12 @@ function addItem(e) {
   itemInput.value = ''
 }
 
+function removeItem(e) {
+  if (e.target.parentElement.classList.contains('remove-item')) {
+    e.target.parentElement.parentElement.remove()
+  }
+}
+
 // Event Listeners
 itemForm.addEventListener('submit', addItem)
+itemList.addEventListener('click', removeItem)
