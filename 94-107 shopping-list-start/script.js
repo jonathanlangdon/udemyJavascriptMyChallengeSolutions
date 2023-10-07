@@ -32,16 +32,20 @@ function addItem(e) {
 
 function removeItem(e) {
   if (e.target.parentElement.classList.contains('remove-item')) {
-    e.target.parentElement.parentElement.remove()
+    if (confirm('Are you sure?')) {
+      e.target.parentElement.parentElement.remove()
+    }
   }
   checkUI()
 }
 
 function clearItems(e) {
-  while (itemList.firstChild) {
-    itemList.removeChild(itemList.firstChild)
+  if (confirm('Are you sure?')) {
+    while (itemList.firstChild) {
+      itemList.removeChild(itemList.firstChild)
+      checkUI()
+    }
   }
-  checkUI()
 }
 
 function checkUI() {
