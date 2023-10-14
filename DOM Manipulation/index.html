@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation Challenge</title>
+  </head>
+  <body>
+    <p id="output">This is a paragraph.</p>
+    <button id="changeTextButton">Change Text</button>
+
+    <script>
+      const button = document.getElementById('changeTextButton')
+      const paragraph = document.getElementById('output')
+      button.addEventListener('click', function () {
+        paragraph.textContent = 'Button clicked!'
+        button.innerText = 'Done'
+      })
+    </script>
+  </body>
+</html>
